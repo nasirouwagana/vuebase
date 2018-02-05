@@ -284,7 +284,7 @@
                     {id: 3, title: 'Logs', link: 'logs'}
                 ],
                 menuItems: [
-                    'Vue', 'React', 'Angular'
+                    'Vue', 'NodeJS', 'Laravel'
                 ],
                 searching: false,
                 search: '',

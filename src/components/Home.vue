@@ -20,17 +20,17 @@
                 <v-layout row>
                     <v-flex wrap>
                         <v-btn outline large fab color="white" class=" outine-2">
-                            <span style="font-size: 24px;"><span style="text-transform: lowercase">i</span>OS</span>
+                            <i class="fab fa-vuejs fa-3x"></i>
                         </v-btn>
                     </v-flex>
                     <v-flex wrap>
                         <v-btn outline large fab color="white" class=" outine-2">
-                            <v-icon>fa-android</v-icon>
+                            <i class="fab fa-node fa-3x"></i>
                         </v-btn>
                     </v-flex>
                     <v-flex wrap>
                         <v-btn outline large fab color="white" class=" outine-2">
-                            <v-icon>fa-code</v-icon>
+                            <i class="fab fa-laravel fa-2x"></i>
                         </v-btn>
                     </v-flex>
                 </v-layout>
