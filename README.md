@@ -1,6 +1,10 @@
-# vuebase
+# Vuebase
 
-> A collection of Vuetify Theme
+> Welcome to Vuebase : a Firebase-like theme : https://vuebase-theme.firebaseapp.com built with [Vue](https://vuejs.org) and [Vuetify](https://next.vuetifyjs.com)
+
+# Features
+- Vue2.5.13
+- Vuetify1.0.0-beta.5
 
 ## Build Setup
 
