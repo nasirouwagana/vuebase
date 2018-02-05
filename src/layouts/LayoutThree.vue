@@ -8,7 +8,6 @@
                 :mini-variant="miniVariant"
                 v-model="drawer"
                 fixed
-                absolute
                 app
         >
             <v-toolbar flat class="transparent" dense>
@@ -93,8 +92,12 @@
                 color="primary"
                 dark
         >
-            <v-toolbar-side-icon @click.stop="drawer = !drawer" class="hidden-sm-and-up"></v-toolbar-side-icon>
-            <v-menu :nudge-width="100">
+            <v-toolbar-side-icon
+                    @click.stop="drawer = !drawer"
+                    class="hidden-lg-and-up"
+                    :class="searching ? 'hidden-xs-only' : ''"
+            />
+            <v-menu :nudge-width="100" :class="searching ? 'hidden-xs-only' : ''">
                 <v-toolbar-title slot="activator" class="pl-2">
                     <span>{{ menuItems[0] }}</span>
                     <v-icon>arrow_drop_down</v-icon>
