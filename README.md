@@ -2,6 +2,8 @@
 
 > Welcome to Vuebase : a Firebase-like theme : https://vuebase-theme.firebaseapp.com built with [Vue](https://vuejs.org) and [Vuetify](https://next.vuetifyjs.com)
 
+![vuebase](https://firebasestorage.googleapis.com/v0/b/vuebase-theme.appspot.com/o/vuebase.png?alt=media&token=f74de4db-17fb-4217-91ee-10cbdafaf596)
+
 # Features
 - Vue2.5.13
 - Vuetify1.0.0-beta.5
