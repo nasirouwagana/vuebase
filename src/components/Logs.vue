@@ -1,6 +1,6 @@
 <template>
     <div>
-        Log
+        Logs
     </div>
 </template>
 
