@@ -6,7 +6,7 @@ Welcome to Vuebase : a Firebase-like theme : https://vuebase-theme.firebaseapp.c
 
 ## Features
 - Vue2.5.13
-- Vuetify1.0.0-beta.5
+- Vuetify1.0.0-beta.6
 
 ## Build Setup
 
