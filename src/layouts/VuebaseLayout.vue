@@ -35,7 +35,6 @@
                         <v-list-tile
                                 to="/"
                                 exact
-
                         >
                             <v-list-tile-action>
                                 <v-icon>home</v-icon>
@@ -238,6 +237,8 @@
 
 <script>
     export default {
+        name: 'VuebaseLayout',
+
         data () {
             return {
                 drawer: true,
@@ -311,9 +312,7 @@
 
             searchBegin () {
                 this.searching = true
-                setTimeout(() => {
-                    document.querySelector('#search').focus()
-                }, 50)
+                setTimeout(() => document.querySelector('#search').focus(), 50)
             },
 
             searchEnd () {
@@ -359,5 +358,4 @@
             display: none !important;
         }
     }
-
 </style>

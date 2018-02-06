@@ -5,18 +5,18 @@
 </template>
 
 <script>
-    import LayoutOne from './layouts/LayoutOne'
+    import VuebaseLayout from './layouts/VuebaseLayout'
 
     export default {
         name: 'App',
 
         components: {
-            LayoutOne
+            VuebaseLayout
         },
 
         computed: {
             component () {
-                return LayoutOne
+                return VuebaseLayout
             }
         }
     }
