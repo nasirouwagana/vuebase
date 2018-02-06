@@ -320,7 +320,7 @@
                 this.search = ''
                 document.querySelector('#search').blur()
             }
-        },
+        }
     }
 </script>
 

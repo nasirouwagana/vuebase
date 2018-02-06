@@ -8,28 +8,22 @@
                 extension-height="300"
                 flat
         >
-            <!--<v-toolbar-title class="pl-2">Home</v-toolbar-title>-->
-            <!--<v-layout row align-center justify-center slot="extension">-->
-            <!--<v-flex xs12>-->
-            <!--<h2>Bienvenue dans Firebase</h2>-->
-            <!--</v-flex>-->
-            <!--</v-layout>-->
             <v-toolbar-title class="mx-auto" slot="extension">
                 <span>Welcome to Vuebase</span>
                 <h2>Everything starts here.</h2>
                 <v-layout row>
                     <v-flex wrap>
-                        <v-btn outline large fab color="white" class=" outine-2">
+                        <v-btn outline large fab color="white" class="outine-2">
                             <i class="fab fa-vuejs fa-3x"></i>
                         </v-btn>
                     </v-flex>
                     <v-flex wrap>
-                        <v-btn outline large fab color="white" class=" outine-2">
+                        <v-btn outline large fab color="white" class="outine-2">
                             <i class="fab fa-node fa-3x"></i>
                         </v-btn>
                     </v-flex>
                     <v-flex wrap>
-                        <v-btn outline large fab color="white" class=" outine-2">
+                        <v-btn outline large fab color="white" class="outine-2">
                             <i class="fab fa-laravel fa-2x"></i>
                         </v-btn>
                     </v-flex>
@@ -65,9 +59,9 @@
                                             </div>
                                         </v-card-title>
                                         <v-card-actions>
-                                            <v-btn flat color="primary">Share</v-btn>
+                                            <v-btn flat color="primary" class="learn-more-btn">Learn more</v-btn>
                                             <v-spacer></v-spacer>
-                                            <v-btn flat color="primary">Explore</v-btn>
+                                            <v-btn flat color="primary">Get started</v-btn>
                                         </v-card-actions>
                                     </v-card>
                                 </v-flex>
@@ -108,7 +102,7 @@
                         title: 'Authentification',
                         description: 'Authenticate and manage users from a variety of providers without server-side-code',
                         color: 'purple'
-                    },
+                    }
                 ]
             }
         }
@@ -122,5 +116,10 @@
 
     .card--flex-toolbar {
         margin-top: -104px;
+    }
+
+    .learn-more-btn {
+        text-transform: initial;
+        text-decoration: underline;
     }
 </style>

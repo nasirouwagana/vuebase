@@ -30,7 +30,7 @@
                 <v-flex xs12 md8 offset-md2>
                     <v-card>
                         <v-card-text>
-                            <router-view></router-view>
+                            <router-view />
                         </v-card-text>
                     </v-card>
                 </v-flex>
@@ -43,12 +43,12 @@
     export default {
         data () {
             return {
-                tabs: 'tabs-1',
+                tabs: null,
                 tabsItems: [
                     {id: 1, title: 'Indicators', link: 'indicators'},
                     {id: 2, title: 'Backup', link: 'backup'},
                     {id: 3, title: 'Logs', link: 'logs'}
-                ],
+                ]
             }
         }
     }
