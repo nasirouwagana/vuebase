@@ -29,58 +29,70 @@
             </v-toolbar>
             <v-divider></v-divider>
 
-            <v-toolbar flat class="transparent" dense>
-                <v-list class="pa-0">
-                    <v-list-tile :to="'/'">
-                        <v-list-tile-action>
-                            <v-icon>home</v-icon>
-                        </v-list-tile-action>
-                        <v-list-tile-content>
-                            <v-list-tile-title>Project Overview</v-list-tile-title>
-                        </v-list-tile-content>
-                        <!--<v-list-tile-action>-->
-                        <!--<v-btn icon @click.stop="">-->
-                        <!--<v-icon>settings</v-icon>-->
-                        <!--</v-btn>-->
-                        <!--</v-list-tile-action>-->
-                    </v-list-tile>
-                </v-list>
-            </v-toolbar>
+            <v-tooltip right :disabled="!miniVariant">
+                <v-toolbar flat class="transparent" dense slot="activator">
+                    <v-list class="pa-0">
+                        <v-list-tile
+                                to="/"
+                                exact
+
+                        >
+                            <v-list-tile-action>
+                                <v-icon>home</v-icon>
+                            </v-list-tile-action>
+                            <v-list-tile-content>
+                                <v-list-tile-title>Project Overview</v-list-tile-title>
+                            </v-list-tile-content>
+                        </v-list-tile>
+                    </v-list>
+                </v-toolbar>
+                <span>Project Overview</span>
+            </v-tooltip>
             <v-divider></v-divider>
 
             <v-list subheader>
                 <v-subheader>ANALYTICS</v-subheader>
-                <v-list-tile
-                        v-for="(item, i) in middleItems"
-                        :key="i"
-                        :to="item.link"
-                        exact
-                >
-                    <v-list-tile-action>
-                        <v-icon v-html="item.icon"></v-icon>
-                    </v-list-tile-action>
-                    <v-list-tile-content>
-                        <v-list-tile-title v-text="item.title"></v-list-tile-title>
-                    </v-list-tile-content>
-                </v-list-tile>
+                <template v-for="item in middleItems">
+                    <v-tooltip right :disabled="!miniVariant">
+                        <v-list-tile
+                                :key="item.icon"
+                                :to="item.link"
+                                exact
+                                slot="activator"
+                        >
+                            <v-list-tile-action>
+                                <v-icon v-html="item.icon"></v-icon>
+                            </v-list-tile-action>
+                            <v-list-tile-content>
+                                <v-list-tile-title v-text="item.title"></v-list-tile-title>
+                            </v-list-tile-content>
+                        </v-list-tile>
+                        <span v-text="item.title"></span>
+                    </v-tooltip>
+                </template>
             </v-list>
             <v-divider></v-divider>
 
             <v-list subheader>
                 <v-subheader>DEVELOP</v-subheader>
-                <v-list-tile
-                        v-for="(item, i) in topItems"
-                        :key="i"
-                        :to="item.link"
-                        exact
-                >
-                    <v-list-tile-action>
-                        <v-icon v-html="item.icon"></v-icon>
-                    </v-list-tile-action>
-                    <v-list-tile-content>
-                        <v-list-tile-title v-text="item.title"></v-list-tile-title>
-                    </v-list-tile-content>
-                </v-list-tile>
+                <template v-for="item in topItems">
+                    <v-tooltip right :disabled="!miniVariant">
+                        <v-list-tile
+                                :key="item.icon"
+                                :to="item.link"
+                                exact
+                                slot="activator"
+                        >
+                            <v-list-tile-action>
+                                <v-icon v-html="item.icon"></v-icon>
+                            </v-list-tile-action>
+                            <v-list-tile-content>
+                                <v-list-tile-title v-text="item.title"></v-list-tile-title>
+                            </v-list-tile-content>
+                        </v-list-tile>
+                        <span v-text="item.title"></span>
+                    </v-tooltip>
+                </template>
             </v-list>
             <!--<v-divider></v-divider>-->
         </v-navigation-drawer>
@@ -287,7 +299,7 @@
                     'Vue', 'NodeJS', 'Laravel'
                 ],
                 searching: false,
-                search: '',
+                search: ''
             }
         },
 

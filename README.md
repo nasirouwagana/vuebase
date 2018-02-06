@@ -1,10 +1,10 @@
-# Vuebase
+## Vuebase
 
-> Welcome to Vuebase : a Firebase-like theme : https://vuebase-theme.firebaseapp.com built with [Vue](https://vuejs.org) and [Vuetify](https://next.vuetifyjs.com)
+Welcome to Vuebase : a Firebase-like theme : https://vuebase-theme.firebaseapp.com built with [Vue](https://vuejs.org) and [Vuetify](https://next.vuetifyjs.com)
 
 <img src="https://firebasestorage.googleapis.com/v0/b/vuebase-theme.appspot.com/o/vuebase.png?alt=media&token=f74de4db-17fb-4217-91ee-10cbdafaf596" width="425"/> <img src="https://firebasestorage.googleapis.com/v0/b/vuebase-theme.appspot.com/o/vuebase-dashboard.png?alt=media&token=d767450a-17a7-4a6f-a6d3-24caccb89377" width="425"/> 
 
-# Features
+## Features
 - Vue2.5.13
 - Vuetify1.0.0-beta.5
 
