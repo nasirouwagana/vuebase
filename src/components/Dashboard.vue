@@ -10,7 +10,6 @@
             <v-spacer></v-spacer>
             <v-tabs
                     v-model="tabs"
-                    :fixed-tabs="false"
                     color="transparent"
                     slider-color="white"
                     slot="extension"
@@ -18,7 +17,7 @@
                 <v-tab
                         v-for="tabsItem in tabsItems"
                         :key="tabsItem.id"
-                        :to="`/dashboard/${tabsItem.link}`"
+                        :href="'#tabs-' + tabsItem.id"
                 >
                     <span class="pl-2 pr-2">{{ tabsItem.title }}</span>
                 </v-tab>
@@ -28,10 +27,16 @@
         <v-container>
             <v-layout row>
                 <v-flex xs12 md8 offset-md2>
-                    <v-card>
-                        <v-card-text>
-                            <router-view />
-                        </v-card-text>
+                    <v-card color="white">
+                        <v-tabs-items v-model="tabs">
+                            <v-tab-item
+                                    v-for="tabsItem in tabsItems"
+                                    :key="tabsItem.id"
+                                    :id="'tabs-' + tabsItem.id"
+                            >
+                                <v-card-text>{{ tabsItem.title }}</v-card-text>
+                            </v-tab-item>
+                        </v-tabs-items>
                     </v-card>
                 </v-flex>
             </v-layout>

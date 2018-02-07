@@ -11,7 +11,7 @@
                 app
         >
             <v-toolbar flat class="transparent" dense>
-                <v-list class="pa-0">
+                <v-list class="pa-0" :class="{'list-border-bottom' : miniVariant}">
                     <v-list-tile>
                         <v-list-tile-action v-if="!miniVariant">
                             <v-icon large color="orange">invert_colors</v-icon>
@@ -31,7 +31,7 @@
 
             <v-tooltip right :disabled="!miniVariant">
                 <v-toolbar flat class="transparent" dense slot="activator">
-                    <v-list class="pa-0">
+                    <v-list class="pa-0" :class="{'list-border-bottom' : miniVariant}">
                         <v-list-tile
                                 to="/"
                                 exact
@@ -49,7 +49,7 @@
             </v-tooltip>
             <v-divider></v-divider>
 
-            <v-list subheader>
+            <v-list subheader :class="{'list-border-bottom' : miniVariant}">
                 <v-subheader>ANALYTICS</v-subheader>
                 <template v-for="item in middleItems">
                     <v-tooltip right :disabled="!miniVariant">
@@ -274,7 +274,7 @@
                     {
                         icon: 'dashboard',
                         title: 'Dashboard',
-                        link: '/dashboard/indicators'
+                        link: '/dashboard'
                     },
                     {
                         icon: 'event',
@@ -357,5 +357,9 @@
         @media $display-breakpoints.sm-and-down {
             display: none !important;
         }
+    }
+
+    .list-border-bottom {
+        border-bottom: 1px solid rgba(255,255,255,.12);
     }
 </style>
