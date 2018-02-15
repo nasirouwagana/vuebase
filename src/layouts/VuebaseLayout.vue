@@ -138,15 +138,15 @@
                 />
             </div>
 
-            <v-btn icon @click.stop="rightDrawer = !rightDrawer">
-                <v-tooltip bottom>
-                    <v-badge color="red" overlap slot="activator">
+            <v-tooltip bottom>
+                <v-btn icon @click.stop="rightDrawer = !rightDrawer" slot="activator">
+                    <v-badge color="red" overlap>
                         <span slot="badge">2</span>
                         <v-icon>notifications</v-icon>
                     </v-badge>
-                    <span>2 unread notifications</span>
-                </v-tooltip>
-            </v-btn>
+                </v-btn>
+                <span>2 unread notifications</span>
+            </v-tooltip>
 
             <v-menu
                     bottom
@@ -360,6 +360,6 @@
     }
 
     .list-border-bottom {
-        border-bottom: 1px solid rgba(255,255,255,.12);
+        border-bottom: 1px solid rgba(255, 255, 255, .12);
     }
 </style>
