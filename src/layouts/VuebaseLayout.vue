@@ -51,7 +51,7 @@
 
             <v-list subheader :class="{'list-border-bottom' : miniVariant}">
                 <v-subheader>ANALYTICS</v-subheader>
-                <template v-for="item in middleItems">
+                <template v-for="item in analyticsItems">
                     <v-tooltip right :disabled="!miniVariant">
                         <v-list-tile
                                 :key="item.icon"
@@ -74,7 +74,7 @@
 
             <v-list subheader>
                 <v-subheader>DEVELOP</v-subheader>
-                <template v-for="item in topItems">
+                <template v-for="item in developItems">
                     <v-tooltip right :disabled="!miniVariant">
                         <v-list-tile
                                 :key="item.icon"
@@ -243,7 +243,24 @@
             return {
                 drawer: true,
                 fixed: false,
-                topItems: [
+                analyticsItems: [
+                    {
+                        icon: 'dashboard',
+                        title: 'Dashboard',
+                        link: '/dashboard/indicators'
+                    },
+                    {
+                        icon: 'event',
+                        title: 'Events',
+                        link: ''
+                    },
+                    {
+                        icon: 'comment',
+                        title: 'Notifications',
+                        link: ''
+                    }
+                ],
+                developItems: [
                     {
                         icon: 'supervisor_account',
                         title: 'Authentification',
@@ -267,23 +284,6 @@
                     {
                         icon: 'functions',
                         title: 'Functions',
-                        link: ''
-                    }
-                ],
-                middleItems: [
-                    {
-                        icon: 'dashboard',
-                        title: 'Dashboard',
-                        link: '/dashboard'
-                    },
-                    {
-                        icon: 'event',
-                        title: 'Events',
-                        link: ''
-                    },
-                    {
-                        icon: 'comment',
-                        title: 'Notifications',
                         link: ''
                     }
                 ],
