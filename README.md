@@ -5,8 +5,8 @@ Welcome to Vuebase : a Firebase-like theme : https://vuebase-theme.firebaseapp.c
 <img src="https://firebasestorage.googleapis.com/v0/b/vuebase-theme.appspot.com/o/vuebase.png?alt=media&token=78b2c2dd-64e0-46e1-bf9b-63e319a30d87" width="425"/> <img src="https://firebasestorage.googleapis.com/v0/b/vuebase-theme.appspot.com/o/vuebase-dashboard.png?alt=media&token=d767450a-17a7-4a6f-a6d3-24caccb89377" width="425"/> 
 
 ## Features
-- Vue2.5.13
-- Vuetify1.0.5
+- Vue2.5.16
+- Vuetify1.0.13
 
 ## Build Setup
 
