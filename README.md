@@ -6,7 +6,7 @@ Welcome to Vuebase : a Firebase-like theme : https://vuebase-theme.firebaseapp.c
 
 ## Features
 - Vue2.5.16
-- Vuetify1.0.13
+- Vuetify1.0.16
 
 ## Build Setup
 
@@ -24,4 +24,5 @@ npm run build
 npm run build --report
 ```
 
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+## Integration Vuebase with Laravel 5.6
+[https://github.com/nasirouwagana/laravel-vuebase](https://github.com/nasirouwagana/laravel-vuebase)
