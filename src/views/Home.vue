@@ -43,31 +43,33 @@
                             </v-layout>
                             <v-layout row wrap>
                                 <v-flex xs12 sm6 md6 lg4 v-for="item in links" :key="item.id">
-                                    <v-card>
-                                        <v-img
-                                                src=""
-                                                aspect-ratio="2.75"
-                                                height="125px"
-                                                :class="item.color"
-                                        ></v-img>
+                                    <v-hover>
+                                        <v-card slot-scope="{ hover }" :class="`elevation-${hover ? 12 : 2}`">
+                                            <v-img
+                                                    src=""
+                                                    aspect-ratio="2.75"
+                                                    height="125px"
+                                                    :class="item.color"
+                                            ></v-img>
 
-                                        <v-card-title primary-title>
-                                            <div>
-                                                <h3 class="headline mb-0">{{item.title}}</h3>
+                                            <v-card-title primary-title>
                                                 <div>
-                                                    {{item.description}}
+                                                    <h3 class="headline mb-0">{{item.title}}</h3>
+                                                    <div>
+                                                        {{item.description}}
+                                                    </div>
                                                 </div>
-                                            </div>
-                                        </v-card-title>
+                                            </v-card-title>
 
-                                        <v-card-actions>
-                                            <v-btn flat color="primary" class="learn-more-btn">
-                                                Learn more
-                                            </v-btn>
-                                            <v-spacer></v-spacer>
-                                            <v-btn flat color="primary">Get started</v-btn>
-                                        </v-card-actions>
-                                    </v-card>
+                                            <v-card-actions>
+                                                <v-btn flat color="primary" class="learn-more-btn">
+                                                    Learn more
+                                                </v-btn>
+                                                <v-spacer></v-spacer>
+                                                <v-btn flat color="primary">Get started</v-btn>
+                                            </v-card-actions>
+                                        </v-card>
+                                    </v-hover>
                                 </v-flex>
                             </v-layout>
                         </v-container>
