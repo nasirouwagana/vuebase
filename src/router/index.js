@@ -7,27 +7,27 @@ const routes = [
     {
         path: '/',
         name: 'home',
-        component: () => import('@/components/Home')
+        component: () => import('../views/Home')
     },
     {
         path: '/dashboard',
         name: 'dashboard',
-        component: () => import('@/components/Dashboard/Layout'),
+        component: () => import('../views/Dashboard/Layout'),
         children: [
             {
                 path: 'indicators',
                 name: 'dashboard.indicators',
-                component: () => import('@/components/Dashboard/Indicators')
+                component: () => import('../views/Dashboard/Indicators')
             },
             {
                 path: 'backup',
                 name: 'dashboard.backup',
-                component: () => import('@/components/Dashboard/Backup')
+                component: () => import('../views/Dashboard/Backup')
             },
             {
                 path: 'logs',
                 name: 'dashboard.logs',
-                component: () => import('@/components/Dashboard/Logs')
+                component: () => import('../views/Dashboard/Logs')
             }
         ]
     }
@@ -35,5 +35,6 @@ const routes = [
 
 export default new VueRouter({
     mode: 'history',
+    base: process.env.BASE_URL,
     routes
 })

@@ -44,12 +44,13 @@
                             <v-layout row wrap>
                                 <v-flex xs12 sm6 md6 lg4 v-for="item in links" :key="item.id">
                                     <v-card>
-                                        <v-card-media
+                                        <v-img
                                                 src=""
+                                                aspect-ratio="2.75"
                                                 height="125px"
                                                 :class="item.color"
-                                        >
-                                        </v-card-media>
+                                        ></v-img>
+
                                         <v-card-title primary-title>
                                             <div>
                                                 <h3 class="headline mb-0">{{item.title}}</h3>
@@ -58,8 +59,11 @@
                                                 </div>
                                             </div>
                                         </v-card-title>
+
                                         <v-card-actions>
-                                            <v-btn flat color="primary" class="learn-more-btn">Learn more</v-btn>
+                                            <v-btn flat color="primary" class="learn-more-btn">
+                                                Learn more
+                                            </v-btn>
                                             <v-spacer></v-spacer>
                                             <v-btn flat color="primary">Get started</v-btn>
                                         </v-card-actions>
@@ -76,7 +80,7 @@
 
 <script>
     export default {
-        data () {
+        data() {
             return {
                 links: [
                     {
@@ -115,7 +119,7 @@
     }
 
     .card--flex-toolbar {
-        margin-top: -104px;
+        margin-top: -124px;
     }
 
     .learn-more-btn {

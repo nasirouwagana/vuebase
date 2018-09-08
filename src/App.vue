@@ -1,6 +1,6 @@
 <template>
     <component :is="component">
-        <slot />
+        <slot/>
     </component>
 </template>
 
@@ -15,7 +15,7 @@
         },
 
         computed: {
-            component () {
+            component() {
                 return VuebaseLayout
             }
         }

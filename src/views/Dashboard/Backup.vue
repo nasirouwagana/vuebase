@@ -1,11 +1,9 @@
 <template>
     <v-card color="white">
-        <v-card-text>Indicators</v-card-text>
+        <v-card-text>Backup</v-card-text>
     </v-card>
 </template>
 
 <script>
-    export default {
-        
-    }
+    export default {}
 </script>

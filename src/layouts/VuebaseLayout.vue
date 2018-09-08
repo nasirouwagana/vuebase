@@ -17,7 +17,9 @@
                             <v-icon large color="orange">invert_colors</v-icon>
                         </v-list-tile-action>
                         <v-list-tile-content v-if="!miniVariant">
-                            <v-list-tile-title><h2>Vuebase</h2></v-list-tile-title>
+                            <v-list-tile-title>
+                                <h2 v-text="appName"></h2>
+                            </v-list-tile-title>
                         </v-list-tile-content>
                         <v-list-tile-action>
                             <v-btn icon @click.stop="miniVariant = !miniVariant">
@@ -32,10 +34,7 @@
             <v-tooltip right :disabled="!miniVariant">
                 <v-toolbar flat class="transparent" dense slot="activator">
                     <v-list class="pa-0" :class="{'list-border-bottom' : miniVariant}">
-                        <v-list-tile
-                                to="/"
-                                exact
-                        >
+                        <v-list-tile to="/" exact>
                             <v-list-tile-action>
                                 <v-icon>home</v-icon>
                             </v-list-tile-action>
@@ -113,7 +112,7 @@
                     <span>{{ menuItems[0] }}</span>
                     <v-icon>arrow_drop_down</v-icon>
                 </v-toolbar-title>
-                <v-list>
+                <v-list light>
                     <v-list-tile v-for="item in menuItems" :key="item" @click="">
                         <v-list-tile-title v-text="item"></v-list-tile-title>
                     </v-list-tile>
@@ -129,13 +128,13 @@
                         id="search"
                         v-model="search"
                         append-icon="close"
-                        :append-icon-cb="searchEnd"
+                        @click:append="searchEnd"
                         label="Search"
                         hide-details
                         single-line
                         color="white"
                         @blur="onBlur"
-                />
+                ></v-text-field>
             </div>
 
             <v-tooltip bottom>
@@ -148,16 +147,13 @@
                 <span>2 unread notifications</span>
             </v-tooltip>
 
-            <v-menu
-                    bottom
-                    left
-            >
+            <v-menu>
                 <v-btn icon slot="activator">
                     <v-avatar class="white" size="32">
                         <v-icon color="primary">person</v-icon>
                     </v-avatar>
                 </v-btn>
-                <v-list class="pa-0">
+                <v-list class="pa-0" light>
                     <v-list-tile avatar>
                         <v-list-tile-avatar>
                             <v-avatar class="primary" size="48px">
@@ -194,7 +190,7 @@
         </v-toolbar>
 
         <v-content>
-            <router-view />
+            <router-view/>
         </v-content>
 
         <v-navigation-drawer
@@ -239,8 +235,9 @@
     export default {
         name: 'VuebaseLayout',
 
-        data () {
+        data() {
             return {
+                appName: process.env.VUE_APP_APP_NAME,
                 drawer: true,
                 fixed: false,
                 analyticsItems: [
@@ -292,30 +289,40 @@
                 rightDrawer: false,
                 tabs: null,
                 tabsItems: [
-                    {id: 1, title: 'Indicators', link: 'indicators'},
-                    {id: 2, title: 'Backup', link: 'backup'},
-                    {id: 3, title: 'Logs', link: 'logs'}
+                    {
+                        id: 1,
+                        title: 'Indicators',
+                        link: 'indicators'
+                    },
+                    {
+                        id: 2,
+                        title: 'Backup',
+                        link: 'backup'
+                    },
+                    {
+                        id: 3,
+                        title: 'Logs',
+                        link: 'logs'
+                    }
                 ],
-                menuItems: [
-                    'Vue', 'NodeJS', 'Laravel'
-                ],
+                menuItems: ['Vue', 'NodeJS', 'Laravel'],
                 searching: false,
                 search: ''
             }
         },
 
         methods: {
-            onBlur () {
+            onBlur() {
                 this.searching = false
                 this.search = ''
             },
 
-            searchBegin () {
+            searchBegin() {
                 this.searching = true
                 setTimeout(() => document.querySelector('#search').focus(), 50)
             },
 
-            searchEnd () {
+            searchEnd() {
                 this.searching = false
                 this.search = ''
                 document.querySelector('#search').blur()
@@ -325,7 +332,7 @@
 </script>
 
 <style scoped lang="stylus">
-    @import '../../node_modules/vuetify/src/stylus/settings/_variables.styl'
+    @import '../../node_modules/vuetify/src/stylus/settings/_variables.styl';
 
     .bottom-menu {
         position: absolute;
@@ -360,6 +367,6 @@
     }
 
     .list-border-bottom {
-        border-bottom: 1px solid rgba(255, 255, 255, .12);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.12);
     }
 </style>

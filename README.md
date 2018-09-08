@@ -1,28 +1,31 @@
-## Vuebase
+# Vuebase
 
-Welcome to Vuebase : a Firebase-like theme : https://vuebase-theme.firebaseapp.com built with [Vue](https://vuejs.org) and [Vuetify](https://next.vuetifyjs.com)
+Welcome to Vuebase : a Firebase-like theme : [https://vuebase-theme.firebaseapp.com](https://vuebase-theme.firebaseapp.com) built with [Vue](https://vuejs.org) and [Vuetify](https://vuetifyjs.com)
 
 <img src="https://firebasestorage.googleapis.com/v0/b/vuebase-theme.appspot.com/o/vuebase.png?alt=media&token=78b2c2dd-64e0-46e1-bf9b-63e319a30d87" width="425"/> <img src="https://firebasestorage.googleapis.com/v0/b/vuebase-theme.appspot.com/o/vuebase-dashboard.png?alt=media&token=d767450a-17a7-4a6f-a6d3-24caccb89377" width="425"/> 
 
+## Requirements
+- [Node.js](https://nodejs.org)
+- [Vue CLI 3](https://cli.vuejs.org/guide/installation.html)
+
 ## Features
-- Vue2.5.16
-- Vuetify1.0.16
+- [Vue 2.5.17](https://vuejs.org)
+- [Vuetify 1.2.2](https://vuetifyjs.com)
 
-## Build Setup
-
-``` bash
-# install dependencies
+## Project setup
+```
 npm install
-
-# serve with hot reload at localhost:8080
-npm run dev
-
-# build for production with minification
-npm run build
-
-# build for production and view the bundle analyzer report
-npm run build --report
 ```
 
-## Integration Vuebase with Laravel 5.6
+### Compiles and hot-reloads for development
+```
+npm run serve
+```
+
+### Compiles and minifies for production
+```
+npm run build
+```
+
+# Integration Vuebase with Laravel 5.6
 [https://github.com/nasirouwagana/laravel-vuebase](https://github.com/nasirouwagana/laravel-vuebase)
