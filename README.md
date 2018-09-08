@@ -5,7 +5,7 @@ Welcome to Vuebase : a Firebase-like theme : [https://vuebase-theme.firebaseapp.
 <img src="https://firebasestorage.googleapis.com/v0/b/vuebase-theme.appspot.com/o/vuebase.png?alt=media&token=78b2c2dd-64e0-46e1-bf9b-63e319a30d87" width="425"/> <img src="https://firebasestorage.googleapis.com/v0/b/vuebase-theme.appspot.com/o/vuebase-dashboard.png?alt=media&token=d767450a-17a7-4a6f-a6d3-24caccb89377" width="425"/> 
 
 ## Requirements
-- [Node.js](https://nodejs.org)
+- [Node.js 8.9 or above (8.11.0+ recommended)](https://nodejs.org)
 - [Vue CLI 3](https://cli.vuejs.org/guide/installation.html)
 
 ## Features
@@ -15,6 +15,12 @@ Welcome to Vuebase : a Firebase-like theme : [https://vuebase-theme.firebaseapp.
 ## Project setup
 ```
 npm install
+```
+
+## Environment Variables and Modes
+Details are available here : [https://cli.vuejs.org/guide/mode-and-env.html](https://cli.vuejs.org/guide/mode-and-env.html)
+```
+cp .env.local .env
 ```
 
 ### Compiles and hot-reloads for development
